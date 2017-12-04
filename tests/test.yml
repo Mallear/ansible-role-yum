@@ -13,4 +13,4 @@
       when: ansible_os_family == 'RedHat'
 
   roles:
-    - mallear.yum
+    - Mallear.yum
