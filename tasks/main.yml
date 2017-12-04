@@ -1,0 +1,8 @@
+---
+
+- name: Ensure yum_install_packages are installed.
+  yum:
+    name: "{{ item.name | default(item) }}"
+    version: "{{ item.version | default(omit) }}"
+    state: "{{ item.state | default(omit) }}"
+  with_items: "{{ yum_install_packages }}"
